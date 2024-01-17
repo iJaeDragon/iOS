@@ -17,3 +17,9 @@
     
     return false;
 }
+
+- (void)inAppBrowserViewCloseHandler:(NSMutableArray*) resultData {
+    [self.webView evaluateJavaScript:[NSString stringWithFormat:@"%@('\"%@\"');", [resultData objectAtIndex:1], [resultData objectAtIndex:0]] completionHandler:^(NSString *result, NSError *error){
+        
+    }];
+}
