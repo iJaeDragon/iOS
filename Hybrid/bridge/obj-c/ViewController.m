@@ -1,6 +1,6 @@
-// call! :  webkit.messageHandlers.bokjiroioscall.postMessage(link);
+// call! :  webkit.messageHandlers.app.postMessage(link);
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    if ([message.name isEqualToString:@"bokjiroioscall"]) {
+    if ([message.name isEqualToString:@"app"]) {
         // 파라미터 확인 파서
         NSRange openingBracket = [message.body rangeOfString:@"("];
         NSRange closingBrace = [message.body rangeOfString:@")"
